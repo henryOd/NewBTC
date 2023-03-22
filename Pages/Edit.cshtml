@@ -1,0 +1,66 @@
+﻿@page
+@model NewBTC.Pages.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>InvestmentP</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="InvestmentP.Id" />
+            <div class="form-group">
+                <label asp-for="InvestmentP.Name" class="control-label"></label>
+                <input asp-for="InvestmentP.Name" class="form-control" />
+                <span asp-validation-for="InvestmentP.Name" class="text-danger"></span>
+            </div>
+          @*  <div class="form-group">
+                <label asp-for="InvestmentP.SelectedDuration" class="control-label"></label>
+                <input asp-for="InvestmentP.SelectedDuration" class="form-control" />
+                <span asp-validation-for="InvestmentP.SelectedDuration" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="InvestmentP.Amount" class="control-label"></label>
+                <input asp-for="InvestmentP.Amount" class="form-control" />
+                <span asp-validation-for="InvestmentP.Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InvestmentP.Email" class="control-label"></label>
+                <input asp-for="InvestmentP.Email" class="form-control" />
+                <span asp-validation-for="InvestmentP.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InvestmentP.DateCreated" class="control-label"></label>
+                <input asp-for="InvestmentP.DateCreated" class="form-control" />
+                <span asp-validation-for="InvestmentP.DateCreated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InvestmentP.MiniInvestment" class="control-label"></label>
+                <input asp-for="InvestmentP.MiniInvestment" class="form-control" />
+                <span asp-validation-for="InvestmentP.MiniInvestment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InvestmentP.MaxInvestment" class="control-label"></label>
+                <input asp-for="InvestmentP.MaxInvestment" class="form-control" />
+                <span asp-validation-for="InvestmentP.MaxInvestment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

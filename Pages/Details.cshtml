@@ -1,0 +1,62 @@
+﻿@page
+@model NewBTC.Pages.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>InvestmentP</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestmentP.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestmentP.Name)
+        </dd>
+       @* <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestmentP.SelectedDuration)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestmentP.SelectedDuration)
+        </dd>*@
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestmentP.Amount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestmentP.Amount)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestmentP.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestmentP.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestmentP.DateCreated)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestmentP.DateCreated)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestmentP.MiniInvestment)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestmentP.MiniInvestment)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InvestmentP.MaxInvestment)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InvestmentP.MaxInvestment)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.InvestmentP?.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

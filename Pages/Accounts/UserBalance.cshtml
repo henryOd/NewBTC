@@ -1,0 +1,61 @@
+﻿@page
+@model NewBTC.Pages.Accounts.UserBalanceModel
+
+@{
+    ViewData["Title"] = "UserBalance";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>UserBalance</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Account[0].UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Account[0].UserBalance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Account[0].Actiondate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Account[0].ActionTaken)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Account[0].ActionAmount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Account) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserBalance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Actiondate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActionTaken)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActionAmount)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.AccountId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.AccountId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.AccountId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
