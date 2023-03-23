@@ -26,6 +26,7 @@ namespace NewBTC.Pages.Deposits
             if (_context.Deposits != null)
             {
                 Deposits = await _context.Deposits.ToListAsync();
+
             }
         }
     }

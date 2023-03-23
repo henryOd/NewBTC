@@ -1,4 +1,5 @@
 ﻿@page
+@using NewBTC.Areas.Investment
 @model NewBTC.Pages.Withdraw.EditModel
 
 @{
@@ -15,35 +16,34 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Withdraw.Id" />
-            <div class="form-group">
+          @*  <div class="form-group">
                 <label asp-for="Withdraw.Username" class="control-label"></label>
                 <input asp-for="Withdraw.Username" class="form-control" />
                 <span asp-validation-for="Withdraw.Username" class="text-danger"></span>
-            </div>
+            </div>*@
             <div class="form-group">
                 <label asp-for="Withdraw.withdrawAmount" class="control-label"></label>
                 <input asp-for="Withdraw.withdrawAmount" class="form-control" />
                 <span asp-validation-for="Withdraw.withdrawAmount" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="Withdraw.WithdrawDate" class="control-label"></label>
                 <input asp-for="Withdraw.WithdrawDate" class="form-control" />
                 <span asp-validation-for="Withdraw.WithdrawDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
+            </div>*@
+            @*<div class="form-group">
                 <label asp-for="Withdraw.TotalAmount" class="control-label"></label>
                 <input asp-for="Withdraw.TotalAmount" class="form-control" />
                 <span asp-validation-for="Withdraw.TotalAmount" class="text-danger"></span>
-            </div>
-            <div class="form-group">
+            </div>*@
+          @*  <div class="form-group">
                 <label asp-for="Withdraw.AcctBalance" class="control-label"></label>
                 <input asp-for="Withdraw.AcctBalance" class="form-control" />
                 <span asp-validation-for="Withdraw.AcctBalance" class="text-danger"></span>
-            </div>
+            </div>*@
             <div class="form-group">
                 <label asp-for="Withdraw.Wstatus" class="control-label"></label>
-                <select asp-for="Withdraw.Wstatus" class="form-control"></select>
-                <span asp-validation-for="Withdraw.Wstatus" class="text-danger"></span>
+                 @Html.DropDownListFor(m=>m.Withdraw.Wstatus, new SelectList(Enum.GetValues(typeof(withdrawStatus)), Model?.Withdraw?.Wstatus),"Update payment status")
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

@@ -36,6 +36,7 @@ namespace NewBTC.Pages.Withdraw
             {
                 return Page();
             }
+            Withdraw.Username = User.Identity?.Name;
             Withdraw.WithdrawDate = DateTime.Now;
  
             _context.Withdraw.Add(Withdraw);

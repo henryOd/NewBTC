@@ -34,45 +34,20 @@ namespace NewBTC.Pages.Deposits
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid )
+          if (!ModelState.IsValid || _context.Deposits == null || Deposits == null)
             {
                 
                 return Page();
 
             }
-
-            
-                // Create a new account if one doesn't already exist for the deposit
-                //var existingAccount = _context.Account.FirstOrDefault(a => a.UserName==Deposits.Name);
-                //if (existingAccount == null)
-                //{
-                //    existingAccount = new Account
-                //    {
-                //        UserName = User.Identity?.Name,
-                //        UserBalance = Deposits.Amount,
-                //        ActionAmount = Deposits.Amount,
-                //        Actiondate = DateTime.Now,
-                //        ActionTaken = "Deposit"
-
-                //    };
-
-                //    _context.Account.Add(existingAccount);
-
-                //}
-                //else
-                //{
-                //    existingAccount.UserBalance += Deposits.Amount;
-                //    _context.Account.Update(existingAccount);
-                //}
-
-                // Add the new deposit record
-                //Deposits.Account = existingAccount;
+             
             Deposits.Name = User.Identity?.Name;
             Deposits.DateDeposited = DateTime.Now;
             _context.Deposits.Add(Deposits);
-                await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
             
             return RedirectToPage("./Index");
         }
+     
     }
 }
