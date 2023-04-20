@@ -9,7 +9,6 @@
         public Status status { get; set; }
         public decimal Balance { get; set; }
 
-
     }
 
     public enum Status

@@ -1,0 +1,55 @@
+﻿@model IList<NewBTC.Areas.Investment.Deposits>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().DateDeposited)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Balance)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateDeposited)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Balance)
+            </td>
+            <td>
+               
+                    <button type="button" class="btn btn-primary" onclick="openDepositModal(@item.Id)">Edit</button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<script>
+
+
+    
+</script>

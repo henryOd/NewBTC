@@ -1,0 +1,44 @@
+﻿<div class="modal fade" id="depositModal" tabindex="-1" role="dialog" aria-labelledby="depositModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="depositModalLabel">Edit Deposit</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="depositModalBody">
+                Loading...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="saveDeposit()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openDepositModal(id) {
+        $.get("/deposit/edit/" + id, function(data) {
+            $("#depositModalBody").html(data);
+            $("#depositModal").modal("show");
+        });
+    }
+
+    function saveDeposit() {
+        var form = $("#depositForm");
+        $.ajax({
+            type: "POST",
+            url: form.attr("DepositEdit"),
+            data: form.serialize(),
+            success: function(result) {
+                $("#depositModal").modal("hide");
+                loadDepositList();
+            },
+            error: function(xhr, status, error) {
+                alert("An error occurred while saving the deposit: " + xhr.responseText);
+            }
+        });
+    }
+</script>

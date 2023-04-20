@@ -1,5 +1,8 @@
-﻿namespace NewBTC.Areas.Investment
+﻿using Microsoft.AspNetCore.Authorization;
+
+namespace NewBTC.Areas.Investment
 {
+    [Authorize]
     public class Account
     {
         public int AccountId { get; set; }

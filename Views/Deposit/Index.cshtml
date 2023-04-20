@@ -1,0 +1,134 @@
+﻿@page 
+@model NewBTC.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Pages/Shared/AdminLTE/_Layout.cshtml";
+}
+
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Starter</title>
+
+  <partial name="AdminLTE/_Styles" />
+</head>
+<body class="hold-transition sidebar-mini">
+  <div class="wrapper">
+
+    <partial name="AdminLTE/_TopNavigation" />
+
+    <partial name="AdminLTE/_MainNavigation" />
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0">Starter Page</h1>
+              <h1>Index</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                
+                <li class="breadcrumb-item active">Starter Page</li>
+              </ol>
+                <p><button class="btn btn-primary" onclick="showPartialView()">Load</button></p>
+                <div>
+    <button onclick="loadDepositList()">Deposits</button>
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#AddDeposit" onclick="RegisterDepositNow(1)">Add Deposit</button>
+</div>
+
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header -->
+      <!-- Main content -->
+      <div class="content">
+        <div class="container-fluid">
+         <h1>Index Two</h1>
+         <div id="grid">
+             
+
+         </div>
+         <div id="depositList"></div>
+<div id="depositEdit"></div>
+<div id="depositNow"></div>
+         <div>
+             
+         </div>
+
+          
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+      <div class="p-3">
+        <h5>Title</h5>
+        <p>Sidebar content</p>
+      </div>
+    </aside>
+    <!-- /.control-sidebar -->
+
+    <partial name="AdminLTE/_Footer" />
+  </div>
+  <!-- ./wrapper -->
+  <!-- REQUIRED SCRIPTS -->
+  <!-- jQuery -->
+  <
+</body>
+
+<partial name="AdminLTE/_Scripts" />
+
+
+    <script>
+//function showPartialView(){
+//    $.get("/Deposits/Index?handler=DepositList", function(data) {
+//        $("#grid").html(data);
+//    });
+//}
+
+
+    function loadDepositList() {
+        $.get("/deposit/list", function(data) {
+            $("#depositList").html(data);
+        });
+    }
+    function RegisterDepositNow() {
+        $.ajax({
+            type: "Get",
+            url:"/Deposit/CreateDeposit",
+            success: function(result) {
+                $("#depositNow").html(result);
+                $("#AddDdeposit").modal('show');
+            }
+        })
+    }
+
+    //function loadDepositEdit(id) {
+    //    $.get("/deposit/edit/" + id, function(data) {
+    //        $("#depositEdit").html(data);
+    //    });
+    //}
+
+   
+        function openDepositModal(id) {
+        $.get("/deposit/edit/" + id, function(data) {
+            $("#depositModalBody").html(data);
+            $("#depositModal").modal("show");
+            $("#depositEdit").html(data);
+
+        });
+    }
+
+    </script>
+  

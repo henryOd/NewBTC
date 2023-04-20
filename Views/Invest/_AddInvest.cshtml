@@ -1,0 +1,39 @@
+﻿@using NewBTC.Areas.Investment
+@model NewBTC.Areas.Investment.InvestmentP
+
+
+@{
+    ViewData["Title"] = "_AddInvest";
+    
+}
+<div class="modal fade" role="dialog" tabindex="1" id="AddInvest" aria-labelledby="AddInvestLable" aria-hidden="true">
+    <div class="modal-dialog modal-lg-modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class=" modal-header">
+                <h2>Fill This Form to invest</h2>
+            </div>
+            <div class="modal-body">
+                <form asp-action="CreateInvest" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                <label asp-for="InvestmentP.Name" class="control-label">Name</label>
+                <input asp-for="InvestmentP.Name" class="form-control" />
+                <span asp-validation-for="InvestmentP.Name" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                 @Html.DropDownListFor(m=>m.Duration, new SelectList(Enum.GetValues(typeof(PlanType)),Model?.Duration),"Select Plan Type")
+            </div>
+                   <div class="form-group">
+                <label asp-for="Amount" class="control-label">How much do you want to Invest?</label>
+                <input asp-for="Amount" class="form-control" />
+                <span asp-validation-for="Amount" class="text-danger"></span>
+            </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

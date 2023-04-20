@@ -9,9 +9,11 @@ using NewBTC.Areas.Investment;
 using Microsoft.AspNetCore.Identity;
 
 using NewBTC.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace NewBTC.Pages.Accounts
 {
+    [Authorize]
     public class UserBalanceModel : PageModel
     {
         private readonly NewBTC.Data.ApplicationDbContext _context;

@@ -1,0 +1,17 @@
+﻿@model NewBTC.Areas.Investment.CryptoPrices[]
+
+
+
+<table>
+    <tr>
+        <th>Cryptocurrency</th>
+        <th>Price (USD)</th>
+    </tr>
+    @foreach (var cryptoPrice in Model)
+    {
+        <tr>
+            <td>@cryptoPrice.Name</td>
+            <td>@cryptoPrice.PriceUSD.ToString("0.00")</td>
+        </tr>
+    }
+</table>

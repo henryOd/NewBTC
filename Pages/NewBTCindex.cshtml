@@ -1,0 +1,773 @@
+﻿@page
+@model NewBTC.Pages.NewBTCindexModel
+@{
+}
+
+@{
+    ViewData["Title"] = "NewBTC";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+@*<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>bitcypo</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">*@
+    <!-- bootstrap css -->
+    @*<link rel="stylesheet" href="/NewBTCcss/bootstrap.min.css">*@
+    <!-- style css -->
+    
+    <!-- responsive-->
+   
+    <!-- awesome fontfamily -->
+   
+@*</head>*@
+
+
+
+
+<!-- body -->
+
+<div class="main-layout body1" >
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="/NewBTCImages/graf1.jpg" alt="" /></div>
+    </div>
+    <!-- end loader -->
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a class="active" href="NewBTCindex.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="searvices.html">Searvices</a>
+        <a href="testimonial.html">Testimonial</a>
+        <a href="works.html">Works</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <!-- header -->
+    @*<header>
+        <!-- header inner -->
+        <div class="head-top">
+            <div class="container-fluid">
+                <div class="row d_flex">
+                    <div class="col-sm-3">
+                        <div class="logo">
+                            <a href="index.html">BitCYPO</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <ul class="social_icon text_align_right d_none">
+                            <li> <a href="Javascript:void(0)"><i class="fa fa-facebook-f"></i></a></li>
+                            <li> <a href="Javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
+                            <li> <a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li> <a href="Javascript:void(0)"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li> <a href="Javascript:void(0)"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <ul class="email text_align_right">
+                            <li class="d_none"><a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                            <li class="d_none"> <a href="Javascript:void(0)"><i class="fa fa-search" style="cursor: pointer;" aria-hidden="true"></i></a> </li>
+                            <li>
+                                <button class="openbtn" onclick="openNav()"><img src="/NewBTCImages/menu_btn.png"></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>*@
+    <!-- end header -->
+    <!-- start slider section -->
+   @* <marquee>
+        <h3>BTC Price:</h3>
+    <div id="bitcoin-price"></div>
+    </marquee>*@
+    <div id="top_section" class=" banner_main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1" ></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="container-fluid">
+                                    <div class="carousel-caption relative">
+                                        <div class="row d_flex">
+                                            <div class="col-md-6">
+                                                <div class="con_img">
+                                                    <figure><img class="img_responsive" src="/NewBTCImages/top_img.png" alt="#" /></figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="bluid">
+                                                    <h1>We Offer<br> Flexible Investment Plans</h1>
+                                                    <p>We offer a range of investment options to suit your needs and budget, from small one-time investments to regular contributions. Our team will guide you every step of the way, from setting up your account to choosing the right investment strategy for your goals.
+                                                    </p>
+                                                    <a class="read_more" href="/">Invest Now </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="carousel-caption relative">
+                                        <div class="row d_flex">
+                                            <div class="col-md-6">
+                                                <div class="con_img">
+                                                    <figure><img class="img_responsive" src="/NewBTCImages/top_img.png" alt="#" /></figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="bluid">
+                                                    <h1><br> Welcome to our Bitcoin investment and yield platform!</h1>
+                                                    <p>Unlock the potential of your money with our Bitcoin investment and yield platform. Join now and start earning high returns on your investment with just a few clicks. Don't wait - the future of finance is here.
+                                                    </p>
+                                                    <a class="read_more" href="Javascript:void(0)">Read More </a><a class="read_more" href="Javascript:void(0)">Get A Quote </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="carousel-caption relative">
+                                        <div class="row d_flex">
+                                            <div class="col-md-6">
+                                                <div class="con_img">
+                                                    <figure><img class="img_responsive" src="/NewBTCImages/top_img.png" alt="#" /></figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="bluid">
+                                                    <h1>What we do <br> Here you can invest in the future of digital currency and reap the benefits.</h1>
+                                                    <p>As a lay user, you may be wondering what Bitcoin is and how it works. Simply put, Bitcoin is a decentralized digital currency that allows for fast, secure, and low-cost transactions. It is not controlled by any government or financial institution, making it a powerful tool for those who value independence and privacy.
+                                                    </p>
+                                                    <a class="read_more" href="/About">Read More </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end slider section -->
+    <!-- wallet -->
+    <div class="wallet">
+        <div class="container-fluid">
+            <h3>AVAILABLE INVESTMENT PLANS</h3>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div id="wa_hover" class="wallet_box text_align_center">
+                        <i><img src="/NewBTCImages/wa1.svg" alt="#"/></i>
+                        <h3>STARTER PLAN</h3>
+                            
+                        <p>Minimum Amount: $100 </p><br />
+                        <p>Maximum Amount: $400 </p><br />
+                        <p>Interest Rate: 20% in 30 Days </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div id="wa_hover" class="wallet_box text_align_center">
+                        <i><img src="/NewBTCImages/wa2.svg" alt="#"/></i>
+                        <h3>GOLD PLAN</h3>
+                        <p>Minimum Amount: $500 </p><br />
+                        <p>Maximum Amount: $1500 </p><br />
+                        <p>Interest Rate: 35% in 30 Days </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div id="wa_hover" class="wallet_box text_align_center">
+                        <i><img src="/NewBTCImages/wa3.svg" alt="#"/></i>
+                        <h3>PREMIUM PLAN </h3>
+                        <p>Minimum Amount: $2,000 </p><br />
+                        <p>Maximum Amount: $10,000 </p><br />
+                        <p>Interest Rate: 45% in 14 Days </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div id="wa_hover" class="wallet_box text_align_center">
+                        <i><img src="/NewBTCImages/wa4.svg" alt="#"/></i>
+                        <h3>EXCLUSIVE PLAN</h3>
+                        <p>Minimum Amount: $11,000 </p><br />
+                        <p>Maximum Amount: $30,000 </p><br />
+                        <p>Interest Rate: 50% in 30 Days </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end wallet -->
+    <!-- about -->
+    <div id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="about_border">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="titlepage text_align_left">
+                                    <h2>About Us</h2>
+                                </div>
+                                <div class="about_text">
+                                    <p>At our company, we are committed to transparency and accountability. We believe that our clients deserve to know exactly how their investments are being managed, and we provide regular updates on our investment strategies and performance. </p>
+                                    <a class="read_more" href="/About">Read More</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="about_img">
+                                    <figure><img class="img_responsive" src="/NewBTCImages/about2.png" alt="#" /></figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end about -->
+    <!-- graf -->
+    <div class="graf">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="nav nav-tabs md-tabs graf_tab" id="myTabMD" role="tablist">
+                        <li>
+                            <a class="nav-link active" id="home-tab-md" data-toggle="tab" href="#tab1" role="tab" aria-controls="home-md" aria-selected="true">Bitcoin(BTC)</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" id="profile-tab-md" data-toggle="tab" href="#tab2" role="tab" aria-controls="profile-md" aria-selected="false">Ethereum (ETH)</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" id="contact-tab-md" data-toggle="tab" href="#tab3" role="tab" aria-controls="contact-md" aria-selected="false">Lite Coin(LTC)</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" id="contact-tab-md" data-toggle="tab" href="#tab4" role="tab" aria-controls="contact-md" aria-selected="false">Binance Coin (BNB)</a>
+                        </li>
+                      
+                    </ul>
+                    <div class="tab-content card  graf_content" id="myTabContentMD">
+                        <div class="tab-pane fade show active padi" id="tab1" role="tabpanel" aria-labelledby="home-tab-md">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                    
+                                        <h4>Current Price: <br /> <span id="bitcoin-price"></span></h4>
+  
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        <h4>Daily Change <br /><span id="bitcoin-change"></span> </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        
+                                        <h4>24 Hour Low <br /><span id="bitcoin-low"></span> </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        <h4>24H High <br /><span id="bitcoin-high"></span> </h4>
+                                       
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        <h4>Today Open <br /><span id="bitcoin-open"></span> </h4>
+                                </div>
+                                 </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        <h4>24H Volume <span id="bitcoin-volume"></span> </h4>
+                                    </div>
+                                </div>
+                           
+                            </div>
+                            <div class="graf_bootom">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="growth text_align_center">
+                                            <figure>
+                                                <h3 class="h3tota">Total Growth</h3>
+                                                <img class="img_responsive" src="/NewBTCImages/Chart1.png" alt="#" />
+                                                @*<canvas id="bitcoin-chart"></canvas>*@
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    @*<div class="col-md-6">
+                                        <div class="growth text_align_center">
+                                            <h3>LiveTrades <span style="color: #face34;" class="pa_ri">USD 123456.09</span></h3>
+                                            <figure><img class="img_responsive" src="/NewBTCImages/graf2.jpg" alt="#" /></figure>
+                                        </div>
+                                    </div>*@
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade padi" id="tab2" role="tabpanel" aria-labelledby="profile-tab-md">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                    
+                                        <h4>Current Price: <br /> <span id="ethereum-price"></span></h4>
+  
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        <h4>Daily Change <br /><span id="ethereum-change"></span> </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        
+                                        <h4>24 Hour Low <br /><span id="ethereum-low"></span> </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        <h4>24H High <br /><span id="ethereum-high"></span> </h4>
+                                       
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        <h4>Today Open <br /><span id="ethereum-open"></span> </h4>
+                                </div>
+                                 </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        <h4>24H Volume <span id="ethereum-volume"></span> </h4>
+                                    </div>
+                                </div>
+                           
+                            </div>
+                            <div class="graf_bootom">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="growth text_align_center">
+                                            <figure>
+                                                <h3 class="h3tota">Total Growth</h3>
+                                                <img class="img_responsive" src="/NewBTCImages/ethchart.png" alt="#" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade padi" id="tab3" role="tabpanel" aria-labelledby="contact-tab-md">
+                              <div class="row">
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                    
+                                        <h4>Current Price: <br /> <span id="litecoin-price"></span></h4>
+  
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        <h4>Daily Change <br /><span id="litecoin-change"></span> </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        
+                                        <h4>24 Hour Low <br /><span id="litecoin-low"></span> </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        <h4>24H High <br /><span id="litecoin-high"></span> </h4>
+                                       
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        <h4>Today Open <br /><span id="litecoin-open"></span> </h4>
+                                </div>
+                                 </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        <h4>24H Volume <span id="litecoin-volume"></span> </h4>
+                                    </div>
+                                </div>
+                           
+                            </div>
+                            <div class="graf_bootom">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="growth text_align_center">
+                                            <figure>
+                                                <h3 class="h3tota">Total Growth</h3>
+                                                <img class="img_responsive" src="/NewBTCImages/LTCChart.png" alt="#" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                     
+                        <div class="tab-pane fade padi" id="tab4" role="tabpanel" aria-labelledby="contact-tab-md">
+                                      <div class="row">
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                    
+                                        <h4>Current Price: <br /> <span id="binancecoin-price"></span></h4>
+  
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        <h4>Daily Change <br /><span id="binancecoin-change"></span> </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        
+                                        <h4>24 Hour Low <br /><span id="binancecoin-low"></span> </h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        <h4>24H High <br /><span id="binancecoin-high"></span> </h4>
+                                       
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        <h4>Today Open <br /><span id="binancecoin-open"></span> </h4>
+                                </div>
+                                 </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="usd text_align_center">
+                                        <h4>24H Volume <span id="binancecoin-volume"></span> </h4>
+                                    </div>
+                                </div>
+                           
+                            </div>
+                            <div class="graf_bootom">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="growth text_align_center">
+                                            <figure>
+                                                <h3 class="h3tota">Total Growth</h3>
+                                                <img class="img_responsive" src="/NewBTCImages/BNBchart.png" alt="#" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+               
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end graf -->
+    <!-- testimonial -->
+    <div class="testimonial">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="border_testi">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="titlepage text_align_center">
+                                    <h2>Testimonial</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d_flex">
+                            <div class="col-md-10 offset-md-1">
+                                <div id="testimo" class="carousel slide our_testimonial" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#testimo" data-slide-to="0" class="active"></li>
+                                        <li data-target="#testimo" data-slide-to="1"></li>
+                                        <li data-target="#testimo" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="container">
+                                                <div class="carousel-caption posi_in">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <div class="testomoniam_text text_align_center">
+                                                                <i><img src="/NewBTCImages/victoria.png" alt="#"/></i>
+                                                                <h3>Victoria Den</h3>
+                                                                <span>Bitcoin</span>
+                                                                <img src="/NewBTCImages/icon.png" alt="#" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <div class="testomoniam_text text_align_left">
+                                                                <p>I am thrilled to share my experience investing in this bitcoin investment website. The process was seamless, and the platform provided an intuitive and easy-to-use interface that allowed me to quickly and easily invest in bitcoin.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="container">
+                                                <div class="carousel-caption posi_in">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <div class="testomoniam_text text_align_center">
+                                                                <i><img src="/NewBTCImages/felix.png" alt="#"/></i>
+                                                                <h3>Andreas Felix</h3>
+                                                                <span>Bitcoin</span>
+                                                                <img src="/NewBTCImages/icon.png" alt="#" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <div class="testomoniam_text text_align_left">
+                                                                <p>The transaction was completed without any issues, and I was able to see the investment grow in real-time. I am pleased with the results, and I am confident that I made the right decision in choosing this website. </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="container">
+                                                <div class="carousel-caption posi_in">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <div class="testomoniam_text text_align_center">
+                                                                <i><img src="/NewBTCImages/anna.png" alt="#"/></i>
+                                                                <h3>Anna Kim</h3>
+                                                                <span>Ethereum</span>
+                                                                <img src="/NewBTCImages/icon.png" alt="#" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <div class="testomoniam_text text_align_left">
+                                                                <p>I highly recommend this platform to anyone who is looking for a reliable and trustworthy platform to invest in bitcoin.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#testimo" role="button" data-slide="prev">
+                                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#testimo" role="button" data-slide="next">
+                                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end testimonial -->
+    <!-- works -->
+    <div class="works">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage text_align_center">
+                        <h2>How It Works</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="works_vedio; d-flex justify-content-center">
+                        <figure>
+                           
+                            <iframe class="img_responsive; " width="560" height="315" src="https://www.youtube.com/embed/FPys5vPvmVk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- works -->
+    <!-- contact -->
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage text_align_center">
+                        <h2>Requeste A call Back</h2>
+                    </div>
+                </div>
+
+
+                <div class=" col-md-10 offset-md-1">
+                    <form id="request" class="main_form">
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <input class="contactus" placeholder="Full Name" type="type" name="Full Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input class="contactus" placeholder="Email" type="type" name="Email">
+                            </div>
+                            <div class="col-md-6">
+                                <input class="contactus" placeholder="Phone number" type="type" name="Phone number">
+                            </div>
+                            <div class="col-md-6">
+                                <textarea class="textarea" placeholder="Message" type="type" Message="Name"></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <button class="send_btn">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- end contact -->
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a class="logo_bottom" href="index.html">BitCYPO</a>
+                    </div>
+                    <div class="col-md-3 col-sm-6" ">
+                  <div class="Informa conta ">
+                     <h3>Contact Us</h3>
+                     <ul>
+                        <li> <a href="Javascript:void(0) "> <i class="fa fa-map-marker " aria-hidden="true "></i> Location
+                           </a>
+                        </li>
+                        <li> <a href="Javascript:void(0) "><i class="fa fa-phone " aria-hidden="true "></i> Call +01 1234567890
+                           </a>
+                        </li>
+                        <li> <a href="Javascript:void(0) "> <i class="fa fa-envelope " aria-hidden="true "></i> demo@gmail.com
+                           </a>
+                        </li>
+                     </ul>
+                     <ul>
+                        <li>Readable content of                              
+                        </li>
+                        <li>a page when looking                           
+                        </li>
+                        <li>at its layoutreadable                          
+                        </li>
+                        <li>content of a page                             
+                        </li>
+                        <li>when looking at its                         
+                        </li>
+                        <li>layout                          
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 "">
+                        <div class="Informa helpful">
+                            <h3>Useful Link</h3>
+                            <ul>
+                                <li>Readable content of
+                                </li>
+                                <li>a page when looking
+                                </li>
+                                <li>at its layoutreadable
+                                </li>
+                                <li>content of a page
+                                </li>
+                                <li>when looking at its
+                                </li>
+                                <li>layout
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" ">
+                  <div class="Informa ">
+                     <h3>Offices</h3>
+                     <ul>
+                        <li>Readable content of                              
+                        </li>
+                        <li>a page when looking                           
+                        </li>
+                        <li>at its layoutreadable                          
+                        </li>
+                        <li>content of a page                             
+                        </li>
+                        <li>when looking at its                         
+                        </li>
+                        <li>layout                          
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 ">
+                  <div class="Informa ">
+                     <h3>Newsletter</h3>
+                     <form class="newslatter_form ">
+                        <input class="ente " placeholder="Enter your email " type="text " name="Enter your email ">
+                        <button class="subs_btn ">Subscribe</button>
+                     </form>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright text_align_center ">
+               <div class="container ">
+                  <div class="row ">
+                     <div class="col-md-12 ">
+                        
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+     
+      <!-- end footer -->
+      <!-- Javascript files-->
+         
+
+   <script src="/NewBTCjs/CryptoAPI.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   

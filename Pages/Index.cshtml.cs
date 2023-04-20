@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +11,7 @@ using NewBTC.Data;
 
 namespace NewBTC.Pages
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
         private readonly NewBTC.Data.ApplicationDbContext _context;
@@ -17,10 +19,12 @@ namespace NewBTC.Pages
         public IndexModel(NewBTC.Data.ApplicationDbContext context)
         {
             _context = context;
+            
+            
         }
 
         public IList<InvestmentP> InvestmentP { get;set; } = default!;
-
+         public IList<Areas.Investment.Deposits> Deposits { get;set; } = default!;
         public async Task OnGetAsync()
         {
             if (_context.InvestmentP != null)
@@ -28,5 +32,11 @@ namespace NewBTC.Pages
                 InvestmentP = await _context.InvestmentP.ToListAsync();
             }
         }
+
+
+
+        
+
+
     }
 }

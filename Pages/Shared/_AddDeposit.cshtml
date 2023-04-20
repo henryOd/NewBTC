@@ -1,0 +1,36 @@
+﻿ @model NewBTC.Areas.Investment.Deposits
+@{
+    ViewData["Title"] = "_AddDeposit";
+    
+}
+
+<div class="modal fade" role="dialog" tabindex="1" id="AddDeposit" aria-labelledby="AddDepositLable" aria-hidden="true">
+    <div class="modal-dialog modal-lg-modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class=" modal-header">
+                <h3>Fund Your Account</h3>
+            </div>
+            <div class="modal-body">
+                <form asp-action="CreateDeposit" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Amount" class="control-label">How much do you wish to fund?</label>
+                        <input asp-for="Amount" class="form-control" />
+                        <span asp-validation-for="Amount" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <p>Copy the BTC address below and use it for payment</p>
+                        <div>
+                            <h4>gdhmdjskkisjjhhsfffddddff</h4>
+                            <img src="~/NewBTCImages/brcode.jpg" class="" alt="User Image">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
